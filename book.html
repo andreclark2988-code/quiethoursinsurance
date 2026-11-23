@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Book a Time | Quiet Hours Insurance</title>
 <meta name="description" content="Book a 30-minute call with a licensed Quiet Hours Insurance agent, any hour, day or night.">
+<link rel="icon" href="assets/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta name="theme-color" content="#0A1A33">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,500&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -12,18 +15,18 @@
 /* VOICE calm and respectful: a booking card for a busy person, one clear action
    IDEA a quiet night appointment card: pick a night or a morning, then a time, then you're done
    PICTURE the scheduler itself: a two-week strip of days and a grid of time pills, large, on a white card
-   COLOUR Quiet Hours brand: midnight ground, white card, midnight selected states, ember for the one booking button
+   COLOUR Quiet Hours brand: midnight navy #0A1A33 ground, white card, navy selected states, copper #F0B890 glow, coral #F26D42 for the one booking button
    TYPE Cormorant Garamond 600 for titles + Montserrat for everything else
-   LAYOUT slim moonlit header, then one centred card: day strip, part-of-day tabs, time grid, contact details, consent, sticky summary bar with the button */
-:root{color-scheme:light;--midnight:#0B1A3A;--sky:#1D3A70;--moon:#A9D4FF;--lav:#C9B8F0;--ember:#FF6B5B;--ink:#0B1A3A;--muted:#4A5878;--line:#DCE2EE;--raised:#F3F5FA;--err:#B42318}
+   LAYOUT slim night header with the QH clock, then one centred card: day strip, part-of-day tabs, time grid, contact details, consent, sticky summary bar with the button */
+:root{color-scheme:light;--midnight:#0A1A33;--sky:#0F2C50;--moon:#F0B890;--lav:#F0B890;--ember:#F26D42;--ink:#0A1A33;--muted:#4A5878;--line:#DCE2EE;--raised:#F3F5FA;--err:#B42318}
 *{box-sizing:border-box;min-width:0}
 body{margin:0;background:var(--midnight);color:var(--ink);font:16px/1.55 Montserrat,system-ui,sans-serif;overflow-x:clip}
-.top{position:relative;overflow:hidden;background:linear-gradient(180deg,#081633,#1D3A70);padding:32px max(5vw,16px) 92px;color:#F4F8FF}
+.top{position:relative;overflow:hidden;background:linear-gradient(180deg,#000B1D,#0F2C50);padding:32px max(5vw,16px) 92px;color:#F2EAE0}
 .top>svg{position:absolute;inset:0;width:100%;height:100%}
 .top .in{position:relative;max-width:720px;margin:0 auto;display:grid;gap:10px}
-.brand{color:#F4F8FF;text-decoration:none;width:max-content;display:flex;align-items:center;gap:10px;font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;font-size:22px}
+.brand{color:#F2EAE0;text-decoration:none;width:max-content;display:flex;align-items:center;gap:10px;font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;font-size:22px}
 h1{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;font-size:clamp(34px,5vw,46px);line-height:1.05;letter-spacing:-.01em;margin:6px 0 0;text-wrap:balance}
-.top p{margin:0;color:#C3D2EE;font-size:17px;max-width:36em}
+.top p{margin:0;color:#D6CFC6;font-size:17px;max-width:36em}
 main{padding:0 max(5vw,16px) 40px}
 .card{max-width:720px;margin:-60px auto 0;background:#fff;border-radius:16px;padding:clamp(20px,4vw,36px);position:relative}
 h2{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;font-size:27px;line-height:1.1;margin:0 0 4px}
@@ -51,8 +54,8 @@ h2{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;font-size:27px
 label{display:block;font-weight:600;font-size:15px;margin-bottom:6px}
 .hint{display:block;font-weight:400;color:var(--muted);font-size:14px}
 input[type=text],input[type=email],input[type=tel]{width:100%;font:16px/1.4 Montserrat,system-ui,sans-serif;color:var(--ink);background:#fff;border:1.5px solid var(--line);border-radius:8px;padding:12px 14px;min-height:48px}
-input:focus{outline:3px solid var(--moon);outline-offset:1px;border-color:var(--sky)}
-button:focus-visible{outline:3px solid var(--moon);outline-offset:2px}
+input:focus{outline:3px solid var(--ember);outline-offset:1px;border-color:var(--sky)}
+button:focus-visible{outline:3px solid var(--ember);outline-offset:2px}
 .bad input{border-color:var(--err)}
 .msg{display:none;color:var(--err);font-size:14px;margin-top:6px}
 .bad .msg,.bad>.msg{display:block}
@@ -92,12 +95,11 @@ button:focus-visible{outline:3px solid var(--moon);outline-offset:2px}
 <body>
 <header class="top">
   <svg viewBox="0 0 800 260" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-    <defs><mask id="c"><rect width="800" height="260" fill="#fff"/><circle cx="708" cy="64" r="34" fill="#000"/></mask></defs>
     <g id="stars" fill="#fff"></g>
-    <circle cx="690" cy="76" r="38" fill="#F4F8FF" mask="url(#c)"/>
+    <image href="assets/qh-monogram.png" x="610" y="70" width="150" height="94" opacity=".95"/>
   </svg>
   <div class="in">
-    <a class="brand" href="index.html"><svg width="26" height="26" viewBox="0 0 120 120" aria-hidden="true"><path d="M78 14A48 48 0 1 0 106 82A38 38 0 1 1 78 14Z" fill="#F4F8FF"/></svg>Quiet Hours Insurance</a>
+    <a class="brand" href="index.html"><img src="assets/qh-monogram.png" alt="" width="44" height="28" style="height:28px;width:auto">Quiet Hours Insurance</a>
     <h1>Book a time that works for you. Day or night.</h1>
     <p>Pick a time for a 30-minute call with your agent. One agent, no call flood, and late night is welcome.</p>
   </div>
@@ -154,7 +156,7 @@ button:focus-visible{outline:3px solid var(--moon);outline-offset:2px}
     </form>
 
     <div class="done" role="status" aria-live="polite">
-      <svg width="44" height="44" viewBox="0 0 120 120" aria-hidden="true"><path d="M78 14A48 48 0 1 0 106 82A38 38 0 1 1 78 14Z" fill="#0B1A3A"/></svg>
+      <img src="assets/apple-touch-icon.png" alt="" width="56" height="56" style="border-radius:12px">
       <h2 id="thanks">You're booked.</h2>
       <p>Andre will text or call to confirm your appointment. Need to change it? Call or text <b>(657) 541-1876</b>.</p>
       <div class="appt">
@@ -166,7 +168,7 @@ button:focus-visible{outline:3px solid var(--moon);outline-offset:2px}
     </div>
   </div>
   <p class="contact">Questions? Call <b>(657) 541-1876</b> or email <b>andre@quiethoursinsurance.com</b></p>
-  <p class="sample">Andre Clark, licensed insurance agent. License #W561168 · NPN 19105369. <a href="index.html" style="color:#A9D4FF">Back to home</a></p>
+  <p class="sample">Andre Clark, licensed insurance agent. License #W561168 · NPN 19105369. <a href="index.html" style="color:#F0B890">Back to home</a></p>
 </main>
 
 <script>
