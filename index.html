@@ -4,22 +4,28 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Quiet Hours Insurance</title>
+<link rel="icon" href="assets/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta name="theme-color" content="#0A1A33">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,500&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 /* VOICE calm, reassuring occasion page for busy people; hushed, never salesy
-   IDEA a moonlit lake after the house goes quiet: the moment busy people finally get to their own list
-   PICTURE full-bleed night scene: crescent moon, stars, layered hills, still water with a moon path
-   COLOUR Quiet Hours brand: midnight ground, white ink, moonlight and lavender for calm, ember for the one call to action
+   IDEA a still lake after the house goes quiet, with the QH clock rising where the moon used to be
+   PICTURE full-bleed night scene: QH clock monogram glowing copper, stars, layered hills, still water with a copper path
+   COLOUR Quiet Hours brand: midnight navy #0A1A33 ground, ivory #F2EAE0 ink, copper #F0B890 glow, coral #F26D42 for the one call to action
    TYPE Cormorant Garamond 600 for headlines (the brand display face) + Montserrat for text and buttons
    LAYOUT nav, then hero scene with the title in the quiet left sky; bands below stay night-blue to the footer; phone stacks to one column */
-:root{color-scheme:dark;--bg:#0a1734;--band:#0e1f45;--band2:#122856;--ink:#f2f6ff;--soft:#c3d2ee;--muted:#93a6cc;--accent:#a9d4ff;--ember:#FF6B5B;--lav:#c9b8f0;--line:rgba(201,216,245,.18);--card:rgba(255,255,255,.04)}
+:root{color-scheme:dark;--bg:#0A1A33;--band:#0C2140;--band2:#0F2C50;--ink:#F2EAE0;--soft:#D6CFC6;--muted:#A7AEBB;--accent:#F0B890;--ember:#F26D42;--lav:#F0B890;--line:rgba(242,234,224,.16);--card:rgba(255,255,255,.04)}
 *{box-sizing:border-box;min-width:0}
 html{scroll-behavior:smooth;scroll-padding-top:72px}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Montserrat,system-ui,sans-serif;overflow-x:clip}
 a{color:var(--accent)}
 img,svg{max-width:100%}
+.mono{height:30px;width:auto;flex:none}
+.rule{display:flex;align-items:center;gap:14px;color:var(--soft);font-size:13px;font-weight:500;letter-spacing:.32em}
+.rule::before,.rule::after{content:"";height:2px;width:44px;background:var(--ember);flex:none}
 h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;letter-spacing:-.02em;line-height:1.08;margin:0;text-wrap:balance}
 h1{font-size:clamp(42px,6vw,68px);line-height:1.02}
 h2{font-size:clamp(32px,3.8vw,46px)}
@@ -27,25 +33,27 @@ h3{font-size:24px;line-height:1.2}
 p{margin:0}
 .band{padding-block:clamp(44px,6vw,88px);padding-left:max(5vw,16px);padding-right:max(5vw,16px)}
 .wrap{max-width:1240px;margin:0 auto}
-.nav{position:sticky;top:0;z-index:5;background:rgba(10,23,52,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{position:sticky;top:0;z-index:5;background:rgba(10,26,51,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:12px max(5vw,16px)}
-.brand{display:flex;align-items:center;gap:10px;color:var(--ink);text-decoration:none;font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;font-size:19px}
+.brand{display:flex;align-items:center;gap:12px;letter-spacing:.01em;color:var(--ink);text-decoration:none;font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;font-size:19px}
 .links{display:flex;gap:6px 22px;flex-wrap:wrap;align-items:center}
 .links a{color:var(--soft);text-decoration:none;font-size:15px;font-weight:500}
 .links a:hover{color:var(--ink)}
 .btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 22px;border-radius:999px;font-weight:700;font-size:15px;text-decoration:none;white-space:nowrap;transition:transform .15s}
 .btn:hover{transform:translateY(-1px)}
 .btn:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
-.primary{background:#FF6B5B;color:#0B1A3A}
-.ghost{border:1.5px solid rgba(242,246,255,.5);color:var(--ink)}
-.links .btn{color:#0B1A3A;min-height:40px;padding:0 18px}
-.hero{position:relative;min-height:min(86svh,760px);display:grid;align-items:center;overflow:hidden;background:#0b1a3a}
+.primary{background:#F26D42;color:#0A1A33}
+.primary:hover{background:#F58256}
+.ghost{border:1.5px solid rgba(242,234,224,.5);color:var(--ink)}
+.links .btn{color:#0A1A33;min-height:40px;padding:0 18px}
+.hero{position:relative;min-height:min(86svh,760px);display:grid;align-items:center;overflow:hidden;background:#000B1D}
 .hero svg.scene{position:absolute;inset:0;width:100%;height:100%}
 .hero .copy{position:relative;z-index:1;max-width:1240px;width:100%;margin:0 auto;padding:clamp(48px,8vw,110px) max(5vw,16px) clamp(140px,18vw,220px)}
 .hero .copy>div{max-width:620px;display:grid;gap:22px}
+.hero .logo{width:clamp(220px,24vw,300px);height:auto;margin-bottom:6px}
 .hero p.lead{font-size:clamp(17px,1.6vw,19px);color:var(--soft);max-width:34em}
 .chips{display:flex;flex-wrap:wrap;gap:8px}
-.chips span{border:1px solid rgba(207,230,255,.45);background:rgba(15,35,80,.5);border-radius:999px;padding:6px 14px;font-size:14px;font-weight:600;color:#eaf3ff}
+.chips span{border:1px solid rgba(240,184,144,.45);background:rgba(10,26,51,.55);border-radius:999px;padding:6px 14px;font-size:14px;font-weight:600;color:#F2EAE0}
 .actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
 .phone{color:var(--soft);font-size:15px}
 .phone b{color:var(--ink);white-space:nowrap}
@@ -54,12 +62,12 @@ p{margin:0}
 .promise p{color:var(--soft);font-size:17px;margin-top:16px}
 .vs{display:grid;gap:12px}
 .vs>div{display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px;align-items:start;padding:16px 18px;border-radius:14px;background:var(--card);border:1px solid var(--line)}
-.vs>.yes{border-color:rgba(169,212,255,.55);background:rgba(169,212,255,.08)}
+.vs>.yes{border-color:rgba(240,184,144,.55);background:rgba(240,184,144,.08)}
 .vs strong{display:block;font-size:16px}
 .vs small{color:var(--muted);font-size:14.5px}
 .dot{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;font-weight:700;font-size:15px}
 .no .dot{background:rgba(255,255,255,.08);color:var(--muted)}
-.yes .dot{background:var(--accent);color:#0B1A3A}
+.yes .dot{background:var(--accent);color:#0A1A33}
 .coverage{background:var(--bg)}
 .head{display:grid;gap:12px;max-width:640px;margin-bottom:36px}
 .head p{color:var(--soft);font-size:17px}
@@ -86,10 +94,10 @@ summary::-webkit-details-marker{display:none}
 summary::after{content:"+";font-size:24px;color:var(--accent);flex:none}
 details[open] summary::after{content:"\2212"}
 details p{color:var(--soft);padding:0 0 18px;max-width:62ch}
-.cta{background:linear-gradient(180deg,#122856,#0a1734);text-align:center}
+.cta{background:linear-gradient(180deg,#0F2C50,#0A1A33);text-align:center}
 .cta .wrap{display:grid;gap:20px;justify-items:center;max-width:760px}
 .cta p{color:var(--soft);font-size:17px}
-footer{background:#071028;border-top:1px solid var(--line)}
+footer{background:#000B1D;border-top:1px solid var(--line)}
 footer .wrap{display:grid;grid-template-columns:minmax(0,1.3fr) repeat(2,minmax(0,1fr));gap:28px}
 footer p,footer li{color:var(--muted);font-size:14.5px}
 footer ul{list-style:none;padding:0;margin:8px 0 0;display:grid;gap:6px}
@@ -107,7 +115,10 @@ body.doc main>section:not(.legal){display:none}
 body.doc .legal.on{display:block}
 @media(max-width:860px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.promise .wrap,.who .wrap{grid-template-columns:minmax(0,1fr)}.steps ol{grid-template-columns:minmax(0,1fr)}footer .wrap{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}footer .wrap>div:first-child{grid-column:1/-1}}
 @media(max-width:600px){.grid,.people{grid-template-columns:minmax(0,1fr)}.links a:not(.btn){display:none}.hero{min-height:auto}.hero .copy{padding-bottom:150px}footer .wrap{grid-template-columns:minmax(0,1fr)}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}.twinkle{animation:none!important}}
+@media(max-width:600px){.hero .logo{width:200px}.hero .qh,.hero .qhglow{display:none}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}.twinkle,.qh{animation:none!important}}
+@keyframes breathe{0%,100%{opacity:.92}50%{opacity:1;filter:drop-shadow(0 0 14px rgba(240,184,144,.45))}}
+.qh{animation:breathe 6s ease-in-out infinite}
 @keyframes tw{0%,100%{opacity:.35}50%{opacity:1}}
 .twinkle{animation:tw 4s ease-in-out infinite}
 </style>
@@ -116,7 +127,7 @@ body.doc .legal.on{display:block}
 <header class="nav">
   <div class="wrap">
     <a class="brand" href="#top" aria-label="Quiet Hours Insurance home">
-      <svg width="30" height="30" viewBox="0 0 120 120" aria-hidden="true"><path d="M78 14A48 48 0 1 0 106 82A38 38 0 1 1 78 14Z" fill="#f4f8ff"/></svg>
+      <img class="mono" src="assets/qh-monogram.png" alt="" width="48" height="30">
       Quiet Hours Insurance
     </a>
     <nav class="links" aria-label="Main">
@@ -133,33 +144,33 @@ body.doc .legal.on{display:block}
 <section class="hero" aria-labelledby="hero-title">
   <svg class="scene" viewBox="0 0 1440 760" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
     <defs>
-      <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#081633"/><stop offset=".5" stop-color="#1b3a70"/><stop offset=".82" stop-color="#4a6fa5"/><stop offset="1" stop-color="#9db7d9"/></linearGradient>
-      <linearGradient id="haze" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c9b8f0" stop-opacity="0"/><stop offset=".5" stop-color="#c9b8f0" stop-opacity=".22"/><stop offset="1" stop-color="#c9b8f0" stop-opacity="0"/></linearGradient>
-      <radialGradient id="glow"><stop offset="0" stop-color="#eaf3ff" stop-opacity=".5"/><stop offset=".45" stop-color="#bcd6ff" stop-opacity=".14"/><stop offset="1" stop-color="#bcd6ff" stop-opacity="0"/></radialGradient>
-      <linearGradient id="water" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2b4f86"/><stop offset="1" stop-color="#0a1734"/></linearGradient>
-      <linearGradient id="hillA" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5b78a8"/><stop offset="1" stop-color="#3a5585"/></linearGradient>
-      <linearGradient id="hillB" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2d4876"/><stop offset="1" stop-color="#1b315f"/></linearGradient>
-      <mask id="cres"><rect width="1440" height="760" fill="#fff"/><circle cx="1157" cy="186" r="82" fill="#000"/></mask>
+      <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#000B1D"/><stop offset=".45" stop-color="#0A1A33"/><stop offset=".78" stop-color="#14345C"/><stop offset="1" stop-color="#3B5578"/></linearGradient>
+      <linearGradient id="haze" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F0B890" stop-opacity="0"/><stop offset=".5" stop-color="#F0B890" stop-opacity=".14"/><stop offset="1" stop-color="#F0B890" stop-opacity="0"/></linearGradient>
+      <radialGradient id="glow"><stop offset="0" stop-color="#F0B890" stop-opacity=".34"/><stop offset=".45" stop-color="#F26D42" stop-opacity=".1"/><stop offset="1" stop-color="#F26D42" stop-opacity="0"/></radialGradient>
+      <linearGradient id="water" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1D3C66"/><stop offset="1" stop-color="#000B1D"/></linearGradient>
+      <linearGradient id="hillA" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2E4A74"/><stop offset="1" stop-color="#1C3459"/></linearGradient>
+      <linearGradient id="hillB" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#132A4A"/><stop offset="1" stop-color="#0A1A33"/></linearGradient>
     </defs>
     <rect width="1440" height="760" fill="url(#sky)"/>
     <rect y="330" width="1440" height="200" fill="url(#haze)"/>
     <g id="stars"></g>
-    <circle cx="1120" cy="210" r="300" fill="url(#glow)"/>
-    <circle cx="1120" cy="210" r="92" fill="#f4f8ff" mask="url(#cres)"/>
+    <circle class="qhglow" cx="990" cy="210" r="300" fill="url(#glow)"/>
+    <image class="qh" href="assets/qh-monogram.png" x="820" y="100" width="340" height="214" preserveAspectRatio="xMidYMid meet"><title>QH</title></image>
     <path d="M0 540C240 470 420 500 640 540S1060 450 1440 510V600H0Z" fill="url(#hillA)" opacity=".85"/>
     <path d="M0 585C320 540 560 575 800 560S1200 580 1440 565V620H0Z" fill="url(#hillB)"/>
     <rect y="610" width="1440" height="150" fill="url(#water)"/>
-    <g fill="#dfeaff">
-      <rect x="1030" y="628" width="180" height="3" rx="1.5" opacity=".55"/>
-      <rect x="1050" y="646" width="140" height="3" rx="1.5" opacity=".45"/>
-      <rect x="1040" y="664" width="160" height="3" rx="1.5" opacity=".38"/>
-      <rect x="1068" y="682" width="104" height="3" rx="1.5" opacity=".3"/>
-      <rect x="1060" y="700" width="120" height="3" rx="1.5" opacity=".22"/>
-      <rect x="1086" y="718" width="68" height="3" rx="1.5" opacity=".16"/>
+    <g fill="#F0B890">
+      <rect x="900" y="628" width="180" height="3" rx="1.5" opacity=".55"/>
+      <rect x="920" y="646" width="140" height="3" rx="1.5" opacity=".45"/>
+      <rect x="910" y="664" width="160" height="3" rx="1.5" opacity=".38"/>
+      <rect x="938" y="682" width="104" height="3" rx="1.5" opacity=".3"/>
+      <rect x="930" y="700" width="120" height="3" rx="1.5" opacity=".22"/>
+      <rect x="956" y="718" width="68" height="3" rx="1.5" opacity=".16"/>
     </g>
   </svg>
   <div class="copy">
     <div>
+      <img class="logo" src="assets/logo-horizon.png" alt="Quiet Hours Insurance. Coverage when you need it." width="537" height="392">
       <h1 id="hero-title">We connect busy people to the best insurance people.</h1>
       <p class="lead">No time to deal with insurance? Let us do all the footwork. One trusted, licensed agent compares your options and walks you through them on your schedule, day or night. No more getting 1,000 calls a day from agents.</p>
       <div class="chips" aria-label="Coverage we offer"><span>Life</span><span>Health</span><span>Private Health</span><span>ACA</span><span>Critical Illness</span><span>Short-Term Disability</span></div>
@@ -237,6 +248,7 @@ body.doc .legal.on{display:block}
 
 <section class="band cta" aria-labelledby="cta-title">
   <div class="wrap">
+    <p class="rule" aria-hidden="true">PEACE OF MIND. ANY HOUR.</p>
     <h2 id="cta-title">Don't wait. Get the answers you need tonight.</h2>
     <p>Book a time that works for you, or call or message us. A real answer is waiting, no matter the hour.</p>
     <div class="actions" style="justify-content:center">
@@ -252,13 +264,13 @@ body.doc .legal.on{display:block}
 <footer class="band">
   <div class="wrap">
     <div>
-      <a class="brand" href="#top"><svg width="26" height="26" viewBox="0 0 120 120" aria-hidden="true"><path d="M78 14A48 48 0 1 0 106 82A38 38 0 1 1 78 14Z" fill="#f4f8ff"/></svg>Quiet Hours Insurance</a>
+      <a href="#top"><img src="assets/logo-horizon.png" alt="Quiet Hours Insurance. Coverage when you need it." width="537" height="392" style="width:200px;height:auto"></a>
       <p style="margin-top:10px">One trusted agent for busy people. Life, health, private health, ACA, critical illness and short-term disability coverage, nationwide.</p>
     </div>
     <div><h3>Contact</h3><ul><li>(657) 541-1876</li><li>andre@quiethoursinsurance.com</li><li><a href="https://www.facebook.com/profile.php?id=61596610026829">Facebook</a></li><li><a href="book.html">Book online 24/7</a></li></ul></div>
     <div><h3>Legal</h3><ul><li><a href="privacy.html">Privacy policy</a></li><li><a href="terms.html">Text messaging terms</a></li></ul></div>
   </div>
-  <p class="fine">Quiet Hours Insurance is an independent insurance agency. Coverage, eligibility and prices vary by carrier and state. Andre Clark, licensed insurance agent. License #W561168 · NPN 19105369. Licensed in AL, FL, GA, IL, IN, LA, MI, MS, NC, TX and VA.</p>
+  <p class="fine">Quiet Hours Insurance is an independent insurance agency. Coverage, eligibility and prices vary by carrier and state. Andre Clark, licensed insurance agent. License #W561168 &middot; NPN 19105369. Licensed in AL, FL, GA, IL, IN, LA, MI, MS, NC, TX and VA.</p>
 </footer>
 
 <script>
@@ -272,7 +284,7 @@ body.doc .legal.on{display:block}
     ["Short-term disability", "Replaces part of your income if illness or injury keeps you from working for a while.", "M30 84V48l30-22 30 22v36H70V62H50v22z"]
   ];
   document.getElementById("covgrid").innerHTML = cov.map(([t, d, p]) =>
-    `<article class="card"><svg viewBox="0 0 120 120" aria-hidden="true"><path d="${p}" fill="none" stroke="#a9d4ff" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/></svg><h3>${t}</h3><p>${d}</p></article>`).join("");
+    `<article class="card"><svg viewBox="0 0 120 120" aria-hidden="true"><path d="${p}" fill="none" stroke="#F0B890" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/></svg><h3>${t}</h3><p>${d}</p></article>`).join("");
 
   const faq = [
     ["Will I get a flood of calls after I reach out?", "No. You hear from one agent at Quiet Hours, and we never sell your information. Texts are capped at 4 in your first week, and you can reply STOP at any time."],
@@ -291,6 +303,7 @@ body.doc .legal.on{display:block}
   for (let i = 0; i < 260; i++) {
     const x = rnd() * 1440, y = rnd() * 430, r = [0.8, 1, 1.2, 1.6, 2][Math.floor(rnd() * 5)];
     if (x < 820 && y > 90) continue;
+    if (x > 800 && x < 1180 && y > 90 && y < 330) continue;
     const tw = i % 9 === 0 ? ` class="twinkle" style="animation-delay:${(rnd() * 4).toFixed(1)}s"` : "";
     out += `<circle cx="${x.toFixed(0)}" cy="${y.toFixed(0)}" r="${r}" fill="#fff" opacity="${(0.35 + rnd() * 0.55).toFixed(2)}"${tw}/>`;
   }
