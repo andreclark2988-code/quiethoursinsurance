@@ -114,6 +114,20 @@ footer h3{font-size:16px;font-family:Montserrat,sans-serif;letter-spacing:0}
 .back{justify-self:start}
 body.doc main>section:not(.legal){display:none}
 body.doc .legal.on{display:block}
+/* Section flow: alternate deep navy (A) and brighter night blue (B), blending at each edge; text colours switch with them */
+:root{--deep:#0A1A33;--blue:#1C3459}
+.promise{background:linear-gradient(180deg,#000B1D 0,var(--blue) 26%,var(--blue) 78%,var(--deep) 100%)}
+.coverage,.who{background:linear-gradient(180deg,var(--deep) 0,var(--deep) 72%,var(--blue) 100%)}
+.steps,.faq{background:linear-gradient(180deg,var(--blue) 0,var(--blue) 72%,var(--deep) 100%)}
+.cta{background:linear-gradient(180deg,var(--deep) 0,var(--deep) 65%,#000B1D 100%)}
+.promise,.steps,.faq{--soft:#ECE5DB;--muted:#C2C8D3}
+.promise h2,.steps h2,.faq h2,.steps h3{color:var(--accent)}
+.steps li::before{color:var(--ink)}
+.promise .vs>div,.steps li{background:rgba(10,26,51,.38)}
+.promise .vs>.yes{background:rgba(240,184,144,.12)}
+.faq summary{color:var(--ink)}
+.coverage h2,.who h2,.cta h2,.card h3{color:var(--ink)}
+.who .people strong{color:var(--accent)}
 @media(max-width:860px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.promise .wrap,.who .wrap{grid-template-columns:minmax(0,1fr)}.steps ol{grid-template-columns:minmax(0,1fr)}footer .wrap{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}footer .wrap>div:first-child{grid-column:1/-1}}
 @media(max-width:600px){.grid,.people{grid-template-columns:minmax(0,1fr)}.links a:not(.btn){display:none}.hero{min-height:auto}.hero .copy{padding-bottom:150px}footer .wrap{grid-template-columns:minmax(0,1fr)}}
 @media(max-width:600px){.hero .logo{width:200px}}
